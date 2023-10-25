@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 import './App.css';
 
 import { Board } from './components/Board';
+import { ScoreBoard } from './components/ScoreBoard';
 
 function App() {
 
@@ -62,6 +63,7 @@ const checkWinner = (board) =>{
 
   return (
     <div className="App">
+      <ScoreBoard scores = {scores} xPlaying={xPlaying}/>
       <Board board={board} onClick={handleBoxClick}/>
       
     </div>
